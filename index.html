@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Story</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="/images/corazon.png" type="image/x-icon">
+  <script src='https://hammerjs.github.io/dist/hammer.min.js'></script>
+      <script  src="./script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+  
+</head>
+<body>
+
+  <div class="bodycartas">
+    <!-- partial:index.partial.html -->
+    <div class="tinder">
+      <div class="tinder--status">
+        <i class="fa fa-remove"></i>
+        <i class="fa fa-heart"></i>
+      </div>
+    
+      <div class="tinder--cards">
+        <div class="tinder--card">
+          <img class="imgtinder" src="/images/tinder.png">
+          <img src="/images/card1.png">
+          <h3>Natha 25</h3>
+          <p>Si no hablas no des match.</p>
+        </div>
+        <div class="tinder--card">
+          <img class="imgtinder" src="/images/tinder.png">
+          <img src="/images/card2.png">
+          <h3>Anyi 23</h3>
+          <p>Me gusta bailar salsa choque</p>
+        </div>
+        <div class="tinder--card">
+          <img class="imgtinder" src="/images/tinder.png">
+          <img src="/images/card3.png">
+          <h3>Tatii 28</h3>
+          <p>Sigueme en only @tatiirica29.</p>
+        </div>
+        <div class="tinder--card">
+          <img class="imgtinder" src="/images/tinder.png">
+          <img src="/images/card4.png">
+          <h3>Roberta 26</h3>
+          <p>Busco novio que me invite a comer.</p>
+        </div>
+        <div class="tinder--card">
+          <img class="imgtinder" src="/images/tinder.png">
+          <img src="/images/card5.png">
+          <h3>Caro 27</h3>
+          <p>Estoy en mi etapa de bandida.</p>
+        </div>
+        <div class="tinder--card match">
+          <img src="/images/match.png">
+        </div>
+        
+      </div>
+    
+      <div class="tinder--buttons">
+        <button id="nope"><i class="fa fa-remove"></i></button>
+        <button id="love"><i class="fa fa-heart"></i></button>
+      </div>
+    </div>
+    <!-- partial -->
+      <script src='https://hammerjs.github.io/dist/hammer.min.js'></script>
+      <script  src="./script.js"></script>
+    
+    </div>
+
+   <div class="bodyfondo">
+    <img class="background" src="images/background2.svg">
+    <div class="foreground">
+      <div class="ufo_section"></div>
+      <div class="spacer_one"></div>
+     
+
+      <div class="comet_section"></div>
+      <div class="spacer_two"></div>
+      <div class="landing_section">
+      <img class="sofa" src="images/background3.png">
+      <img class="boda" src="images/boda2.png">
+        
+      </div>
+    </div>
+
+  <script>
+
+    $(document).ready(function(){
+      set_section_heights();
+    });
+
+    $(window).resize(function(){
+      set_section_heights();
+    });
+
+    function set_section_heights(){
+
+      var doc_height = $(".background").height();
+
+      var section_heights = {
+        "ufo_section": 0.25,
+        "spacer_one": 0.03,
+        "comet_section": 0.36,
+        "spacer_two": 0.06,
+        "landing_section": 0.298
+      }
+      
+      $.each( section_heights, function( index, value ) {
+        $( "." + index ).height( Math.floor(value * doc_height) );
+      });
+
+    }
+
+  </script>
+  
+</body>
+</html>
